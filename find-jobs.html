@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Find Jobs - bayt.com</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="find-jobs.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="page-find-jobs">
+  <header class="header">
+    <div class="header-inner">
+      <a href="employer.html" class="view-switcher view-switcher-seeker" title="Switch to employer view">For Employers</a>
+      <a href="index.html" class="logo">
+        <img src="assets/bayt-logo.png?v=2" alt="bayt.com" class="logo-img" />
+      </a>
+      <label for="nav-toggle" class="hamburger-btn" aria-label="Open menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <div class="nav-drawer" id="nav-drawer">
+        <nav class="nav">
+          <a href="#">Dashboard</a>
+          <a href="find-jobs.html" class="active">Find Jobs <i class="fas fa-chevron-down"></i></a>
+          <a href="index.html">My jobs</a>
+          <a href="#">My Profile <i class="fas fa-chevron-down"></i></a>
+          <a href="#">Resources <i class="fas fa-chevron-down"></i></a>
+          <a href="#">Premium</a>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Messages"><i class="far fa-comment-dots"></i></button>
+        <button class="icon-btn" aria-label="Notifications"><i class="far fa-bell"></i></button>
+        <button class="icon-btn" aria-label="Profile"><i class="far fa-user"></i></button>
+        <button class="icon-btn" aria-label="Apps"><i class="fas fa-th"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main find-jobs-main">
+    <div class="find-jobs-wrap">
+      <h1 class="page-title">Find Jobs</h1>
+
+      <!-- Keyword search -->
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" id="keyword-search" placeholder="Job title, keywords, or company" class="search-input" />
+      </div>
+
+      <!-- Tag filters -->
+      <div class="filters-section">
+        <div class="filters-row" id="filters-row">
+          <div class="filter-group" data-category="industry">
+            <button type="button" class="filter-trigger" aria-expanded="false" aria-haspopup="listbox">
+              <span class="filter-label">Industry</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="filter-dropdown" hidden>
+              <input type="text" class="filter-typeahead" placeholder="Search industry..." aria-label="Search industry" />
+              <div class="filter-options" role="listbox"></div>
+            </div>
+          </div>
+          <div class="filter-group" data-category="skills">
+            <button type="button" class="filter-trigger" aria-expanded="false" aria-haspopup="listbox">
+              <span class="filter-label">Skills</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="filter-dropdown" hidden>
+              <input type="text" class="filter-typeahead" placeholder="Search skills..." aria-label="Search skills" />
+              <div class="filter-options" role="listbox"></div>
+            </div>
+          </div>
+          <div class="filter-group" data-category="seniority">
+            <button type="button" class="filter-trigger" aria-expanded="false" aria-haspopup="listbox">
+              <span class="filter-label">Seniority</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="filter-dropdown" hidden>
+              <input type="text" class="filter-typeahead" placeholder="Search seniority..." aria-label="Search seniority" />
+              <div class="filter-options" role="listbox"></div>
+            </div>
+          </div>
+          <div class="filter-group" data-category="employment_type">
+            <button type="button" class="filter-trigger" aria-expanded="false" aria-haspopup="listbox">
+              <span class="filter-label">Employment Type</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="filter-dropdown" hidden>
+              <input type="text" class="filter-typeahead" placeholder="Search type..." aria-label="Search employment type" />
+              <div class="filter-options" role="listbox"></div>
+            </div>
+          </div>
+          <div class="filter-group" data-category="experience_level">
+            <button type="button" class="filter-trigger" aria-expanded="false" aria-haspopup="listbox">
+              <span class="filter-label">Experience Level</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="filter-dropdown" hidden>
+              <input type="text" class="filter-typeahead" placeholder="Search level..." aria-label="Search experience level" />
+              <div class="filter-options" role="listbox"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active filter chips -->
+        <div class="active-filters" id="active-filters" hidden>
+          <span class="active-filters-label">Active filters:</span>
+          <div class="filter-chips" id="filter-chips"></div>
+          <button type="button" class="btn-clear-filters" id="clear-filters">Clear all</button>
+        </div>
+
+        <div class="filters-actions">
+          <button type="button" class="btn btn-primary" id="save-search-btn">
+            <i class="fas fa-bookmark"></i> Save this search
+          </button>
+        </div>
+      </div>
+
+      <!-- Saved searches -->
+      <section class="saved-searches" id="saved-searches-section">
+        <h2 class="section-heading">Saved searches</h2>
+        <div class="saved-searches-list" id="saved-searches-list"></div>
+        <p class="empty-state" id="saved-searches-empty">No saved searches yet. Apply filters and click "Save this search".</p>
+      </section>
+
+      <!-- Results count -->
+      <div class="results-header">
+        <p class="results-count" id="results-count">Showing <strong>0</strong> jobs</p>
+      </div>
+
+      <!-- Job results -->
+      <div class="job-results" id="job-results"></div>
+
+      <!-- Recommended for you -->
+      <section class="recommended-section">
+        <h2 class="section-heading">Recommended for you</h2>
+        <p class="section-desc">Jobs matching your profile and selected tags.</p>
+        <div class="job-results" id="recommended-results"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="find-jobs-data.js"></script>
+  <script src="find-jobs.js"></script>
+  <script src="mobile-nav.js"></script>
+</body>
+</html>

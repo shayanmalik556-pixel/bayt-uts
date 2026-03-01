@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>My jobs - bayt</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="employer.html" class="view-switcher view-switcher-seeker" title="Switch to employer view">For Employers</a>
+      <a href="index.html" class="logo">
+        <img src="assets/bayt-logo.png?v=2" alt="bayt.com" class="logo-img" />
+      </a>
+      <label for="nav-toggle" class="hamburger-btn" aria-label="Open menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <div class="nav-drawer" id="nav-drawer">
+        <nav class="nav">
+          <a href="#">Dashboard</a>
+          <a href="find-jobs.html">Find Jobs <i class="fas fa-chevron-down"></i></a>
+          <a href="index.html" class="active">My jobs</a>
+          <a href="#">My Profile <i class="fas fa-chevron-down"></i></a>
+          <a href="#">Resources <i class="fas fa-chevron-down"></i></a>
+          <a href="#">Premium</a>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Messages"><i class="far fa-comment-dots"></i></button>
+        <button class="icon-btn" aria-label="Notifications"><i class="far fa-bell"></i></button>
+        <button class="icon-btn" aria-label="Profile"><i class="far fa-user"></i></button>
+        <button class="icon-btn" aria-label="Apps"><i class="fas fa-th"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="main">
+    <div class="content-card">
+      <div class="page-title-row">
+        <h1 class="page-title">My jobs</h1>
+        <button type="button" class="btn btn-filter-listing" id="seeker-filter-btn" aria-label="Filter by tags"><i class="fas fa-filter"></i> Filter By Tags</button>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" data-tab="recent">Recent</button>
+        <button class="tab" data-tab="closed">Closed</button>
+        <button class="tab" data-tab="saved">Saved</button>
+      </div>
+
+      <!-- Job listings -->
+      <div class="job-list">
+        <!-- Job card 1 -->
+        <article class="job-card" data-job-id="1">
+          <div class="job-card-left">
+            <div class="progress-ring progress-green" data-score="76" data-total="3830">
+              <svg viewBox="0 0 80 80">
+                <circle class="ring-bg" cx="40" cy="40" r="36" />
+                <circle class="ring-fill" cx="40" cy="40" r="36" />
+              </svg>
+              <div class="ring-content">
+                <span class="score">76</span>
+                <span class="total">3830</span>
+              </div>
+            </div>
+          </div>
+          <div class="job-card-body">
+            <div class="job-title-row">
+              <h2 class="job-title"><a href="#">Data Analyst - No Experience Required</a></h2>
+              <button type="button" class="btn-add-tag btn-add-tag-icon seeker-tag-btn-mobile" data-job-id="1" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+            </div>
+            <p class="company">Peroptyx</p>
+            <p class="location">Saudi Arabia · Riyadh</p>
+            <p class="meta">
+              <span class="status"><i class="fas fa-eye-slash"></i> Application status: Not viewed</span>
+              <span class="date">Date applied: 25 Feb 2026</span>
+            </p>
+            <div class="job-card-tags">
+              <div class="job-tags-chips" data-job-id="1"></div>
+              <button type="button" class="btn-add-tag btn-add-tag-icon seeker-tag-btn-desktop" data-job-id="1" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+            </div>
+            <div class="job-actions">
+              <button class="btn btn-secondary">Compare to others</button>
+              <button class="btn btn-primary"><i class="fas fa-lock"></i> Promote now</button>
+            </div>
+          </div>
+          <button class="card-menu" aria-label="More options"><i class="fas fa-ellipsis-v"></i></button>
+        </article>
+
+        <!-- Job card 2 -->
+        <article class="job-card" data-job-id="2">
+          <div class="job-card-left">
+            <div class="progress-ring progress-orange" data-score="164" data-total="1186">
+              <svg viewBox="0 0 80 80">
+                <circle class="ring-bg" cx="40" cy="40" r="36" />
+                <circle class="ring-fill" cx="40" cy="40" r="36" />
+              </svg>
+              <div class="ring-content">
+                <span class="score">164</span>
+                <span class="total">1186</span>
+              </div>
+            </div>
+          </div>
+          <div class="job-card-body">
+            <div class="job-title-row">
+              <h2 class="job-title"><a href="#">Data Analyst</a></h2>
+              <button type="button" class="btn-add-tag btn-add-tag-icon seeker-tag-btn-mobile" data-job-id="2" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+            </div>
+            <p class="company">Mohamed N. Al Hajery and Sons Co. LTD</p>
+            <p class="location">Kuwait · Al Kuwait</p>
+            <p class="meta">
+              <span class="status"><i class="fas fa-eye-slash"></i> Application status: Not viewed</span>
+              <span class="date">Date applied: 25 Feb 2026</span>
+            </p>
+            <div class="job-card-tags">
+              <div class="job-tags-chips" data-job-id="2"></div>
+              <button type="button" class="btn-add-tag btn-add-tag-icon seeker-tag-btn-desktop" data-job-id="2" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+            </div>
+            <div class="job-actions">
+              <button class="btn btn-secondary">Compare to others</button>
+              <button class="btn btn-primary"><i class="fas fa-lock"></i> Promote now</button>
+            </div>
+          </div>
+          <button class="card-menu" aria-label="More options"><i class="fas fa-ellipsis-v"></i></button>
+        </article>
+      </div>
+
+      <!-- Info strip -->
+      <div class="info-strip">
+        <i class="fas fa-info-circle"></i>
+        <span>Can't find a job you applied for?</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Add tag / Manage tags popup -->
+  <div class="tag-modal-overlay" id="tag-modal-overlay" aria-hidden="true" style="display: none;">
+    <div class="tag-modal" id="tag-modal" role="dialog" aria-labelledby="tag-modal-title">
+      <div class="tag-modal-header">
+        <h2 id="tag-modal-title">Add tag to listing</h2>
+        <button type="button" class="tag-modal-close" id="tag-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="tag-modal-body">
+        <div class="tag-modal-view tag-modal-categories" id="tag-modal-categories">
+          <div class="tag-modal-select-row">
+            <h3 class="tag-modal-select-label">Select Category</h3>
+            <a href="manage-tags.html" class="link-manage-tags"><i class="fas fa-cog"></i> Manage tags</a>
+          </div>
+          <div class="tag-category-dropdowns" id="tag-category-list"></div>
+          <div class="inline-add-wrap" id="add-category-inline" hidden>
+            <input type="text" id="add-category-input" class="inline-add-input" placeholder="Category name" />
+            <div class="inline-add-actions">
+              <button type="button" class="btn btn-inline-add" id="add-category-submit">Add</button>
+              <button type="button" class="btn btn-inline-cancel" id="add-category-cancel">Cancel</button>
+            </div>
+          </div>
+          <button type="button" class="btn-add-category" id="btn-add-category">
+            <i class="fas fa-plus"></i> Add category
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter by tags modal (job seeker listing) -->
+  <div class="filter-modal-overlay" id="seeker-filter-overlay" aria-hidden="true" style="display: none;">
+    <div class="filter-modal" id="seeker-filter-modal" role="dialog" aria-labelledby="seeker-filter-title">
+      <div class="filter-modal-header">
+        <h2 id="seeker-filter-title">Filter by category</h2>
+        <button type="button" class="filter-modal-close" id="seeker-filter-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="filter-modal-body" id="seeker-filter-body"></div>
+      <div class="filter-modal-footer">
+        <button type="button" class="btn btn-secondary" id="seeker-filter-clear">Clear</button>
+        <button type="button" class="btn btn-primary" id="seeker-filter-apply">Apply</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="find-jobs-data.js"></script>
+  <script src="script.js"></script>
+  <script src="my-jobs-tags.js"></script>
+  <script src="my-jobs-filter.js"></script>
+  <script src="mobile-nav.js"></script>
+</body>
+</html>

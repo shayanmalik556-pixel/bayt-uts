@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Tag dashboard - bayt.com</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="manage-tags.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="page-manage-tags">
+  <header class="header">
+    <div class="header-inner">
+      <a href="employer.html" class="view-switcher view-switcher-seeker" title="Switch to employer view">For Employers</a>
+      <a href="index.html" class="logo">
+        <img src="assets/bayt-logo.png?v=2" alt="bayt.com" class="logo-img" />
+      </a>
+      <label for="nav-toggle" class="hamburger-btn" aria-label="Open menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <div class="nav-drawer" id="nav-drawer">
+        <nav class="nav">
+          <a href="#">Dashboard</a>
+          <a href="find-jobs.html">Find Jobs <i class="fas fa-chevron-down"></i></a>
+          <a href="index.html">My jobs</a>
+          <a href="#" class="active">My Profile <i class="fas fa-chevron-down"></i></a>
+          <a href="#">Resources <i class="fas fa-chevron-down"></i></a>
+          <a href="#">Premium</a>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Messages"><i class="far fa-comment-dots"></i></button>
+        <button class="icon-btn" aria-label="Notifications"><i class="far fa-bell"></i></button>
+        <button class="icon-btn" aria-label="Profile"><i class="far fa-user"></i></button>
+        <button class="icon-btn" aria-label="Apps"><i class="fas fa-th"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="manage-tags-main">
+    <aside class="manage-tags-sidebar">
+      <div class="sidebar-card">
+        <h2 class="sidebar-title">Manage Tags</h2>
+        <nav class="sidebar-nav">
+          <a href="tags-dashboard.html" class="sidebar-item active">Dashboard</a>
+          <a href="edit-tags.html" class="sidebar-item">Categories &amp; Tags</a>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="manage-tags-content">
+      <div class="content-card">
+        <h2 class="content-card-title">Tag dashboard</h2>
+        <p class="content-card-desc">Overview of your tag usage.</p>
+        <div class="dashboard-stats" id="dashboard-stats"></div>
+        <div class="dashboard-charts" id="dashboard-charts"></div>
+        <div class="dashboard-pie-donut" id="dashboard-pie-donut"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="find-jobs-data.js"></script>
+  <script src="tags-dashboard.js"></script>
+  <script src="mobile-nav.js"></script>
+</body>
+</html>

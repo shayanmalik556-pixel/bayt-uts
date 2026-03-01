@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Categories &amp; Tags - bayt.com</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="manage-tags.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="page-manage-tags">
+  <header class="header">
+    <div class="header-inner">
+      <a href="employer.html" class="view-switcher view-switcher-seeker" title="Switch to employer view">For Employers</a>
+      <a href="index.html" class="logo">
+        <img src="assets/bayt-logo.png?v=2" alt="bayt.com" class="logo-img" />
+      </a>
+      <label for="nav-toggle" class="hamburger-btn" aria-label="Open menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <div class="nav-drawer" id="nav-drawer">
+        <nav class="nav">
+          <a href="#">Dashboard</a>
+          <a href="find-jobs.html">Find Jobs <i class="fas fa-chevron-down"></i></a>
+          <a href="index.html">My jobs</a>
+          <a href="#" class="active">My Profile <i class="fas fa-chevron-down"></i></a>
+          <a href="#">Resources <i class="fas fa-chevron-down"></i></a>
+          <a href="#">Premium</a>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Messages"><i class="far fa-comment-dots"></i></button>
+        <button class="icon-btn" aria-label="Notifications"><i class="far fa-bell"></i></button>
+        <button class="icon-btn" aria-label="Profile"><i class="far fa-user"></i></button>
+        <button class="icon-btn" aria-label="Apps"><i class="fas fa-th"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="manage-tags-main">
+    <aside class="manage-tags-sidebar">
+      <div class="sidebar-card">
+        <h2 class="sidebar-title">Manage Tags</h2>
+        <nav class="sidebar-nav">
+          <a href="tags-dashboard.html" class="sidebar-item">Dashboard</a>
+          <a href="edit-tags.html" class="sidebar-item active">Categories &amp; Tags</a>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="manage-tags-content">
+      <div class="content-card edit-tags-card">
+        <h2 class="content-card-title">Categories &amp; Tags</h2>
+        <p class="content-card-desc">Manage categories and tags. Click <span class="edit-desc-icon" aria-hidden="true">⋮</span> on a category or tag for Rename, Merge, or Delete. Predefined categories cannot be deleted or merged.</p>
+        <div class="edit-toolbar">
+          <div class="edit-inline-form" id="edit-add-category-form">
+            <input type="text" id="edit-add-category-input" placeholder="Category name" class="edit-inline-input" />
+            <button type="button" class="btn btn-inline-add" id="edit-add-category-submit">Add</button>
+            <button type="button" class="btn btn-inline-cancel" id="edit-add-category-cancel">Cancel</button>
+          </div>
+        </div>
+        <div class="edit-categories" id="edit-categories"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Merge target selection modal -->
+  <div class="edit-merge-overlay" id="edit-merge-overlay" hidden>
+    <div class="edit-merge-modal">
+      <h3 class="edit-merge-title" id="edit-merge-title">Merge into</h3>
+      <select id="edit-merge-select" class="edit-merge-select"></select>
+      <div class="edit-merge-actions">
+        <button type="button" class="btn btn-primary" id="edit-merge-confirm">Confirm</button>
+        <button type="button" class="btn btn-inline-cancel" id="edit-merge-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- In-page confirm dialog -->
+  <div class="edit-dialog-overlay" id="edit-confirm-overlay" hidden>
+    <div class="edit-dialog-modal">
+      <p class="edit-dialog-message" id="edit-confirm-message"></p>
+      <div class="edit-dialog-actions">
+        <button type="button" class="btn btn-primary" id="edit-confirm-ok">Confirm</button>
+        <button type="button" class="btn btn-inline-cancel" id="edit-confirm-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- In-page alert dialog -->
+  <div class="edit-dialog-overlay" id="edit-alert-overlay" hidden>
+    <div class="edit-dialog-modal">
+      <p class="edit-dialog-message" id="edit-alert-message"></p>
+      <div class="edit-dialog-actions">
+        <button type="button" class="btn btn-primary" id="edit-alert-ok">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- In-page rename dialog -->
+  <div class="edit-dialog-overlay" id="edit-rename-overlay" hidden>
+    <div class="edit-dialog-modal">
+      <label class="edit-dialog-label" id="edit-rename-label">New name</label>
+      <input type="text" class="edit-dialog-input" id="edit-rename-input" placeholder="Enter name" />
+      <div class="edit-dialog-actions">
+        <button type="button" class="btn btn-primary" id="edit-rename-save">Save</button>
+        <button type="button" class="btn btn-inline-cancel" id="edit-rename-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared actions dropdown (positioned by JS) -->
+  <div id="edit-actions-dropdown" class="edit-actions-dropdown" hidden role="menu">
+    <button type="button" class="edit-action-item" data-action="rename" role="menuitem">Rename</button>
+    <button type="button" class="edit-action-item" data-action="merge" role="menuitem">Merge</button>
+    <button type="button" class="edit-action-item edit-action-delete" data-action="delete" role="menuitem">Delete</button>
+  </div>
+
+  <script src="find-jobs-data.js"></script>
+  <script src="edit-tags.js"></script>
+  <script src="mobile-nav.js"></script>
+</body>
+</html>

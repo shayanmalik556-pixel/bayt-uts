@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Job Postings - bayt.com for employers</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="employer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="page-employer">
+  <header class="header-employer">
+    <div class="header-inner">
+      <a href="index.html" class="view-switcher-employer" title="Switch to job seeker view">For Job Seekers</a>
+      <a href="employer.html" class="logo-wrap">
+        <div class="logo-employer">
+          <img src="assets/bayt-logo-employer.png" alt="bayt.com" class="logo-employer-img" />
+          <span class="logo-tagline">for employers</span>
+        </div>
+      </a>
+      <nav class="nav-employer">
+        <a href="#">My Workspace <i class="fas fa-chevron-down"></i></a>
+        <a href="employer-jobs.html" class="active">Job Postings <i class="fas fa-chevron-down"></i></a>
+        <a href="#">CV Search <i class="fas fa-chevron-down"></i></a>
+        <a href="#">Messages</a>
+        <a href="#">Pricing</a>
+        <a href="#">Resources <i class="fas fa-chevron-down"></i></a>
+      </nav>
+      <div class="header-spacer" aria-hidden="true"></div>
+      <div class="header-buttons">
+        <a href="#" class="btn-talk">Talk to us</a>
+        <a href="#" class="btn-post-job">Post a Job</a>
+        <button type="button" class="icon-btn-employer" aria-label="Messages"><i class="far fa-comment-dots"></i></button>
+        <button type="button" class="icon-btn-employer" aria-label="Notifications"><i class="far fa-bell"></i></button>
+        <button type="button" class="icon-btn-employer" aria-label="Profile"><i class="far fa-user"></i></button>
+        <button type="button" class="icon-btn-employer" aria-label="Menu"><i class="fas fa-th"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main employer-main">
+    <div class="employer-content-card employer-jobs-card">
+      <h1 class="page-title">Job Postings</h1>
+      <p class="employer-jobs-intro">Your posted jobs. Click <strong>Applications</strong> to view and tag applicants.</p>
+      <div class="employer-jobs-list" id="employer-jobs-list">
+        <!-- Fallback: if JS fails to load, show at least one job with Applications link -->
+        <article class="employer-job-row" data-job-id="job-1">
+          <div class="employer-job-info">
+            <h2 class="employer-job-title">Senior Data Analyst</h2>
+            <p class="employer-job-meta">Riyadh, Saudi Arabia · Posted 2026-02-20 · 7 applications</p>
+          </div>
+          <div class="employer-job-actions">
+            <a href="employer-applicants.html?jobId=job-1" class="btn btn-primary employer-btn-applications"><i class="fas fa-users"></i> Applications</a>
+          </div>
+        </article>
+        <article class="employer-job-row" data-job-id="job-2">
+          <div class="employer-job-info">
+            <h2 class="employer-job-title">Frontend Developer</h2>
+            <p class="employer-job-meta">Dubai, UAE · Posted 2026-02-18 · 5 applications</p>
+          </div>
+          <div class="employer-job-actions">
+            <a href="employer-applicants.html?jobId=job-2" class="btn btn-primary employer-btn-applications"><i class="fas fa-users"></i> Applications</a>
+          </div>
+        </article>
+        <article class="employer-job-row" data-job-id="job-3">
+          <div class="employer-job-info">
+            <h2 class="employer-job-title">Product Manager</h2>
+            <p class="employer-job-meta">Cairo, Egypt · Posted 2026-02-15 · 4 applications</p>
+          </div>
+          <div class="employer-job-actions">
+            <a href="employer-applicants.html?jobId=job-3" class="btn btn-primary employer-btn-applications"><i class="fas fa-users"></i> Applications</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    window.EMPLOYER_JOBS = window.EMPLOYER_JOBS || [
+      { id: 'job-1', title: 'Senior Data Analyst', location: 'Riyadh, Saudi Arabia', postedDate: '2026-02-20', status: 'active', applicationCount: 7 },
+      { id: 'job-2', title: 'Frontend Developer', location: 'Dubai, UAE', postedDate: '2026-02-18', status: 'active', applicationCount: 5 },
+      { id: 'job-3', title: 'Product Manager', location: 'Cairo, Egypt', postedDate: '2026-02-15', status: 'active', applicationCount: 4 }
+    ];
+  </script>
+  <script src="employer-jobs-data.js"></script>
+  <script src="employer-jobs.js"></script>
+  <script src="mobile-nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Applications - bayt.com for employers</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="employer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="page-employer">
+  <header class="header-employer">
+    <div class="header-inner">
+      <a href="index.html" class="view-switcher-employer" title="Switch to job seeker view">For Job Seekers</a>
+      <a href="employer.html" class="logo-wrap">
+        <div class="logo-employer">
+          <img src="assets/bayt-logo-employer.png" alt="bayt.com" class="logo-employer-img" />
+          <span class="logo-tagline">for employers</span>
+        </div>
+      </a>
+      <nav class="nav-employer">
+        <a href="#">My Workspace <i class="fas fa-chevron-down"></i></a>
+        <a href="employer-jobs.html" class="active">Job Postings <i class="fas fa-chevron-down"></i></a>
+        <a href="#">CV Search <i class="fas fa-chevron-down"></i></a>
+        <a href="#">Messages</a>
+        <a href="#">Pricing</a>
+        <a href="#">Resources <i class="fas fa-chevron-down"></i></a>
+      </nav>
+      <div class="header-spacer" aria-hidden="true"></div>
+      <div class="header-buttons">
+        <a href="#" class="btn-talk">Talk to us</a>
+        <a href="#" class="btn-post-job">Post a Job</a>
+        <button type="button" class="icon-btn-employer" aria-label="Messages"><i class="far fa-comment-dots"></i></button>
+        <button type="button" class="icon-btn-employer" aria-label="Notifications"><i class="far fa-bell"></i></button>
+        <button type="button" class="icon-btn-employer" aria-label="Profile"><i class="far fa-user"></i></button>
+        <button type="button" class="icon-btn-employer" aria-label="Menu"><i class="fas fa-th"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main employer-main">
+    <div class="employer-content-card employer-applicants-card">
+      <a href="employer-jobs.html" class="employer-applicants-back"><i class="fas fa-arrow-left"></i> Back to Job Postings</a>
+      <div class="employer-applicants-title-row">
+        <div>
+          <h1 class="employer-applicants-title" id="applicants-job-title">Applications</h1>
+          <p class="employer-applicants-subtitle" id="applicants-job-subtitle"></p>
+        </div>
+        <button type="button" class="btn btn-filter-listing employer-btn-filter" id="employer-filter-btn" aria-label="Filter by tags"><i class="fas fa-filter"></i> Filter By Tags</button>
+      </div>
+      <div class="employer-applicants-list" id="employer-applicants-list">
+        <!-- Static fallback so applicants show even if JS fails or loads late -->
+        <article class="employer-applicant-row" data-applicant-id="app-1-1">
+          <div class="employer-applicant-info">
+            <div class="employer-applicant-name-row">
+              <h3 class="employer-applicant-name">Sara Al-Rashid</h3>
+              <button type="button" class="employer-btn-add-tag btn-add-tag-applicant btn-add-tag-icon employer-tag-btn-mobile" data-applicant-id="app-1-1" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+            </div>
+            <p class="employer-applicant-email">sara.r@email.com</p>
+            <p class="employer-applicant-meta">Applied 2026-02-24 · Screening</p>
+          </div>
+          <div class="employer-applicant-tags-wrap">
+            <div class="applicant-tags-chips" data-applicant-id="app-1-1"></div>
+            <button type="button" class="employer-btn-add-tag btn-add-tag-applicant btn-add-tag-icon employer-tag-btn-desktop" data-applicant-id="app-1-1" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+          </div>
+        </article>
+        <article class="employer-applicant-row" data-applicant-id="app-1-2">
+          <div class="employer-applicant-info">
+            <div class="employer-applicant-name-row">
+              <h3 class="employer-applicant-name">Omar Hassan</h3>
+              <button type="button" class="employer-btn-add-tag btn-add-tag-applicant btn-add-tag-icon employer-tag-btn-mobile" data-applicant-id="app-1-2" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+            </div>
+            <p class="employer-applicant-email">omar.h@email.com</p>
+            <p class="employer-applicant-meta">Applied 2026-02-23 · Applied</p>
+          </div>
+          <div class="employer-applicant-tags-wrap">
+            <div class="applicant-tags-chips" data-applicant-id="app-1-2"></div>
+            <button type="button" class="employer-btn-add-tag btn-add-tag-applicant btn-add-tag-icon employer-tag-btn-desktop" data-applicant-id="app-1-2" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+          </div>
+        </article>
+        <article class="employer-applicant-row" data-applicant-id="app-1-3">
+          <div class="employer-applicant-info">
+            <div class="employer-applicant-name-row">
+              <h3 class="employer-applicant-name">Layla Mahmoud</h3>
+              <button type="button" class="employer-btn-add-tag btn-add-tag-applicant btn-add-tag-icon employer-tag-btn-mobile" data-applicant-id="app-1-3" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+            </div>
+            <p class="employer-applicant-email">layla.m@email.com</p>
+            <p class="employer-applicant-meta">Applied 2026-02-22 · Interview</p>
+          </div>
+          <div class="employer-applicant-tags-wrap">
+            <div class="applicant-tags-chips" data-applicant-id="app-1-3"></div>
+            <button type="button" class="employer-btn-add-tag btn-add-tag-applicant btn-add-tag-icon employer-tag-btn-desktop" data-applicant-id="app-1-3" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+          </div>
+        </article>
+        <article class="employer-applicant-row" data-applicant-id="app-1-4">
+          <div class="employer-applicant-info">
+            <div class="employer-applicant-name-row">
+              <h3 class="employer-applicant-name">Khalid Ibrahim</h3>
+              <button type="button" class="employer-btn-add-tag btn-add-tag-applicant btn-add-tag-icon employer-tag-btn-mobile" data-applicant-id="app-1-4" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+            </div>
+            <p class="employer-applicant-email">khalid.i@email.com</p>
+            <p class="employer-applicant-meta">Applied 2026-02-21 · Applied</p>
+          </div>
+          <div class="employer-applicant-tags-wrap">
+            <div class="applicant-tags-chips" data-applicant-id="app-1-4"></div>
+            <button type="button" class="employer-btn-add-tag btn-add-tag-applicant btn-add-tag-icon employer-tag-btn-desktop" data-applicant-id="app-1-4" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+          </div>
+        </article>
+        <article class="employer-applicant-row" data-applicant-id="app-1-5">
+          <div class="employer-applicant-info">
+            <div class="employer-applicant-name-row">
+              <h3 class="employer-applicant-name">Nadia Fathi</h3>
+              <button type="button" class="employer-btn-add-tag btn-add-tag-applicant btn-add-tag-icon employer-tag-btn-mobile" data-applicant-id="app-1-5" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+            </div>
+            <p class="employer-applicant-email">nadia.f@email.com</p>
+            <p class="employer-applicant-meta">Applied 2026-02-20 · Shortlist</p>
+          </div>
+          <div class="employer-applicant-tags-wrap">
+            <div class="applicant-tags-chips" data-applicant-id="app-1-5"></div>
+            <button type="button" class="employer-btn-add-tag btn-add-tag-applicant btn-add-tag-icon employer-tag-btn-desktop" data-applicant-id="app-1-5" aria-label="Add tag" title="Add tag"><i class="fas fa-tag"></i></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Add tag modal (candidate tagging) -->
+  <div class="tag-modal-overlay" id="applicant-tag-modal-overlay" aria-hidden="true" style="display: none;">
+    <div class="tag-modal" id="applicant-tag-modal" role="dialog" aria-labelledby="applicant-tag-modal-title">
+      <div class="tag-modal-header">
+        <h2 id="applicant-tag-modal-title">Add tag to candidate</h2>
+        <button type="button" class="tag-modal-close" id="applicant-tag-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="tag-modal-body">
+        <div class="tag-modal-view tag-modal-categories" id="applicant-tag-modal-categories">
+          <div class="tag-modal-select-row">
+            <h3 class="tag-modal-select-label">Select Category</h3>
+            <a href="employer-tags-dashboard.html" class="link-manage-tags"><i class="fas fa-cog"></i> Manage tags</a>
+          </div>
+          <div class="tag-category-dropdowns" id="applicant-tag-category-list"></div>
+          <div class="inline-add-wrap" id="applicant-add-category-inline" hidden>
+            <input type="text" id="applicant-add-category-input" class="inline-add-input" placeholder="Category name" />
+            <div class="inline-add-actions">
+              <button type="button" class="btn btn-inline-add" id="applicant-add-category-submit">Add</button>
+              <button type="button" class="btn btn-inline-cancel" id="applicant-add-category-cancel">Cancel</button>
+            </div>
+          </div>
+          <button type="button" class="btn-add-category" id="applicant-btn-add-category">
+            <i class="fas fa-plus"></i> Add category
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter by category modal (employer applicants listing) -->
+  <div class="filter-modal-overlay" id="employer-filter-overlay" aria-hidden="true" style="display: none;">
+    <div class="filter-modal" id="employer-filter-modal" role="dialog" aria-labelledby="employer-filter-title">
+      <div class="filter-modal-header">
+        <h2 id="employer-filter-title">Filter by category</h2>
+        <button type="button" class="filter-modal-close" id="employer-filter-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="filter-modal-body" id="employer-filter-body"></div>
+      <div class="filter-modal-footer">
+        <button type="button" class="btn btn-secondary" id="employer-filter-clear">Clear</button>
+        <button type="button" class="btn btn-primary" id="employer-filter-apply">Apply</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.EMPLOYER_APPLICANTS = window.EMPLOYER_APPLICANTS || {
+      'job-1': [
+        { id: 'app-1-1', name: 'Sara Al-Rashid', email: 'sara.r@email.com', appliedDate: '2026-02-24', currentStage: 'Screening' },
+        { id: 'app-1-2', name: 'Omar Hassan', email: 'omar.h@email.com', appliedDate: '2026-02-23', currentStage: 'Applied' },
+        { id: 'app-1-3', name: 'Layla Mahmoud', email: 'layla.m@email.com', appliedDate: '2026-02-22', currentStage: 'Interview' },
+        { id: 'app-1-4', name: 'Khalid Ibrahim', email: 'khalid.i@email.com', appliedDate: '2026-02-21', currentStage: 'Applied' },
+        { id: 'app-1-5', name: 'Nadia Fathi', email: 'nadia.f@email.com', appliedDate: '2026-02-20', currentStage: 'Shortlist' }
+      ],
+      'job-2': [
+        { id: 'app-2-1', name: 'Youssef Ahmed', email: 'youssef.a@email.com', appliedDate: '2026-02-25', currentStage: 'Applied' },
+        { id: 'app-2-2', name: 'Mariam Saleh', email: 'mariam.s@email.com', appliedDate: '2026-02-24', currentStage: 'Technical Test' },
+        { id: 'app-2-3', name: 'Tariq Nasser', email: 'tariq.n@email.com', appliedDate: '2026-02-23', currentStage: 'Applied' }
+      ],
+      'job-3': [
+        { id: 'app-3-1', name: 'Hana Khalil', email: 'hana.k@email.com', appliedDate: '2026-02-22', currentStage: 'Interview' },
+        { id: 'app-3-2', name: 'Rami Farouk', email: 'rami.f@email.com', appliedDate: '2026-02-21', currentStage: 'Shortlist' }
+      ]
+    };
+    window.EMPLOYER_JOBS = window.EMPLOYER_JOBS || [
+      { id: 'job-1', title: 'Senior Data Analyst', location: 'Riyadh, Saudi Arabia', postedDate: '2026-02-20' },
+      { id: 'job-2', title: 'Frontend Developer', location: 'Dubai, UAE', postedDate: '2026-02-18' },
+      { id: 'job-3', title: 'Product Manager', location: 'Cairo, Egypt', postedDate: '2026-02-15' }
+    ];
+  </script>
+  <script src="employer-jobs-data.js"></script>
+  <script src="employer-applicants.js"></script>
+  <script src="employer-applicants-filter.js"></script>
+  <script src="mobile-nav.js"></script>
+</body>
+</html>

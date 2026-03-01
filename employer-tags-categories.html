@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Categories &amp; Tags - bayt.com for employers</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="employer.css">
+  <link rel="stylesheet" href="manage-tags.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="page-employer page-employer-manage-tags">
+  <header class="header-employer">
+    <div class="header-inner">
+      <a href="index.html" class="view-switcher-employer" title="Switch to job seeker view">For Job Seekers</a>
+      <a href="employer.html" class="logo-wrap">
+        <div class="logo-employer">
+          <img src="assets/bayt-logo-employer.png" alt="bayt.com" class="logo-employer-img" />
+          <span class="logo-tagline">for employers</span>
+        </div>
+      </a>
+      <nav class="nav-employer">
+        <a href="#">My Workspace <i class="fas fa-chevron-down"></i></a>
+        <a href="employer-jobs.html">Job Postings <i class="fas fa-chevron-down"></i></a>
+        <a href="#">CV Search <i class="fas fa-chevron-down"></i></a>
+        <a href="#">Messages</a>
+        <a href="#">Pricing</a>
+        <a href="#">Resources <i class="fas fa-chevron-down"></i></a>
+      </nav>
+      <div class="header-spacer" aria-hidden="true"></div>
+      <div class="header-buttons">
+        <a href="#" class="btn-talk">Talk to us</a>
+        <a href="#" class="btn-post-job">Post a Job</a>
+        <button type="button" class="icon-btn-employer" aria-label="Messages"><i class="far fa-comment-dots"></i></button>
+        <button type="button" class="icon-btn-employer" aria-label="Notifications"><i class="far fa-bell"></i></button>
+        <button type="button" class="icon-btn-employer" aria-label="Profile"><i class="far fa-user"></i></button>
+        <button type="button" class="icon-btn-employer" aria-label="Menu"><i class="fas fa-th"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="manage-tags-main employer-manage-tags-main">
+    <aside class="manage-tags-sidebar">
+      <div class="sidebar-card">
+        <h2 class="sidebar-title">Manage Tags</h2>
+        <nav class="sidebar-nav">
+          <a href="employer-tags-dashboard.html" class="sidebar-item">Dashboard</a>
+          <a href="employer-tags-permissions.html" class="sidebar-item">Permissions</a>
+          <a href="employer-tags-categories.html" class="sidebar-item active">Categories &amp; Tags</a>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="manage-tags-content">
+      <div class="content-card edit-tags-card">
+        <h2 class="content-card-title">Categories &amp; Tags</h2>
+        <p class="content-card-desc">Manage categories and tags. Click <span class="edit-desc-icon" aria-hidden="true">⋮</span> on a category or tag for Rename, Merge, or Delete. System categories cannot be deleted or merged.</p>
+        <div class="edit-toolbar">
+          <div class="edit-inline-form" id="employer-edit-add-category-form">
+            <input type="text" id="employer-edit-add-category-input" placeholder="Category name" class="edit-inline-input" />
+            <button type="button" class="btn btn-inline-add" id="employer-edit-add-category-submit">Add</button>
+            <button type="button" class="btn btn-inline-cancel" id="employer-edit-add-category-cancel">Cancel</button>
+          </div>
+        </div>
+        <div class="edit-categories" id="employer-edit-categories"></div>
+      </div>
+    </div>
+  </main>
+
+  <div class="edit-merge-overlay" id="employer-edit-merge-overlay" hidden>
+    <div class="edit-merge-modal">
+      <h3 class="edit-merge-title" id="employer-edit-merge-title">Merge into</h3>
+      <select id="employer-edit-merge-select" class="edit-merge-select"></select>
+      <div class="edit-merge-actions">
+        <button type="button" class="btn btn-primary" id="employer-edit-merge-confirm">Confirm</button>
+        <button type="button" class="btn btn-inline-cancel" id="employer-edit-merge-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="edit-dialog-overlay" id="employer-edit-confirm-overlay" hidden>
+    <div class="edit-dialog-modal">
+      <p class="edit-dialog-message" id="employer-edit-confirm-message"></p>
+      <div class="edit-dialog-actions">
+        <button type="button" class="btn btn-primary" id="employer-edit-confirm-ok">Confirm</button>
+        <button type="button" class="btn btn-inline-cancel" id="employer-edit-confirm-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="edit-dialog-overlay" id="employer-edit-alert-overlay" hidden>
+    <div class="edit-dialog-modal">
+      <p class="edit-dialog-message" id="employer-edit-alert-message"></p>
+      <div class="edit-dialog-actions">
+        <button type="button" class="btn btn-primary" id="employer-edit-alert-ok">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="edit-dialog-overlay" id="employer-edit-rename-overlay" hidden>
+    <div class="edit-dialog-modal">
+      <label class="edit-dialog-label" id="employer-edit-rename-label">New name</label>
+      <input type="text" class="edit-dialog-input" id="employer-edit-rename-input" placeholder="Enter name" />
+      <div class="edit-dialog-actions">
+        <button type="button" class="btn btn-primary" id="employer-edit-rename-save">Save</button>
+        <button type="button" class="btn btn-inline-cancel" id="employer-edit-rename-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="employer-edit-actions-dropdown" class="edit-actions-dropdown" hidden role="menu">
+    <button type="button" class="edit-action-item" data-action="rename" role="menuitem">Rename</button>
+    <button type="button" class="edit-action-item" data-action="merge" role="menuitem">Merge</button>
+    <button type="button" class="edit-action-item edit-action-delete" data-action="delete" role="menuitem">Delete</button>
+  </div>
+
+  <script src="employer-jobs-data.js"></script>
+  <script src="employer-tags-categories.js"></script>
+  <script src="mobile-nav.js"></script>
+</body>
+</html>

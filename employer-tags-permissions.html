@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Permissions - bayt.com for employers</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="employer.css">
+  <link rel="stylesheet" href="manage-tags.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="page-employer page-employer-manage-tags">
+  <header class="header-employer">
+    <div class="header-inner">
+      <a href="index.html" class="view-switcher-employer" title="Switch to job seeker view">For Job Seekers</a>
+      <a href="employer.html" class="logo-wrap">
+        <div class="logo-employer">
+          <img src="assets/bayt-logo-employer.png" alt="bayt.com" class="logo-employer-img" />
+          <span class="logo-tagline">for employers</span>
+        </div>
+      </a>
+      <nav class="nav-employer">
+        <a href="#">My Workspace <i class="fas fa-chevron-down"></i></a>
+        <a href="employer-jobs.html">Job Postings <i class="fas fa-chevron-down"></i></a>
+        <a href="#">CV Search <i class="fas fa-chevron-down"></i></a>
+        <a href="#">Messages</a>
+        <a href="#">Pricing</a>
+        <a href="#">Resources <i class="fas fa-chevron-down"></i></a>
+      </nav>
+      <div class="header-spacer" aria-hidden="true"></div>
+      <div class="header-buttons">
+        <a href="#" class="btn-talk">Talk to us</a>
+        <a href="#" class="btn-post-job">Post a Job</a>
+        <button type="button" class="icon-btn-employer" aria-label="Messages"><i class="far fa-comment-dots"></i></button>
+        <button type="button" class="icon-btn-employer" aria-label="Notifications"><i class="far fa-bell"></i></button>
+        <button type="button" class="icon-btn-employer" aria-label="Profile"><i class="far fa-user"></i></button>
+        <button type="button" class="icon-btn-employer" aria-label="Menu"><i class="fas fa-th"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="manage-tags-main employer-manage-tags-main">
+    <aside class="manage-tags-sidebar">
+      <div class="sidebar-card">
+        <h2 class="sidebar-title">Manage Tags</h2>
+        <nav class="sidebar-nav">
+          <a href="employer-tags-dashboard.html" class="sidebar-item">Dashboard</a>
+          <a href="employer-tags-permissions.html" class="sidebar-item active">Permissions</a>
+          <a href="employer-tags-categories.html" class="sidebar-item">Categories &amp; Tags</a>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="manage-tags-content">
+      <div class="content-card">
+        <h2 class="content-card-title">Tag permissions</h2>
+        <p class="content-card-desc">Assign permissions to users for tag actions. <strong>Create</strong>: add new tags/categories; <strong>Edit</strong>: rename; <strong>Merge</strong>: merge tags or categories; <strong>Use</strong>: apply tags to candidates.</p>
+        <div class="permissions-table-wrap">
+          <table class="permissions-table" id="employer-permissions-table">
+            <thead>
+              <tr>
+                <th>User / Role</th>
+                <th>Create</th>
+                <th>Edit</th>
+                <th>Merge</th>
+                <th>Use tags</th>
+              </tr>
+            </thead>
+            <tbody id="employer-permissions-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="employer-jobs-data.js"></script>
+  <script src="employer-tags-permissions.js"></script>
+  <script src="mobile-nav.js"></script>
+</body>
+</html>
