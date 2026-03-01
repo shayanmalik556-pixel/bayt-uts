@@ -436,8 +436,46 @@ a {
   display: none !important;
 }
 
-/* Desktop: only show the tag button in the tags row (right), never the one next to job title */
+/* Desktop: title, tags and tag button on the same row */
 @media (min-width: 769px) {
+  .job-card-body {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 0;
+    align-items: start;
+  }
+  .job-title-row {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 4px;
+    min-width: 0;
+  }
+  .job-card-tags {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+  .job-card-body .company {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .job-card-body .location {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+  .job-card-body .meta {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+  .job-card-body .job-actions {
+    grid-column: 1 / -1;
+    grid-row: 5;
+  }
   .job-title-row .seeker-tag-btn-mobile {
     display: none !important;
   }
